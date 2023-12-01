@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs'
-import logo from '../assets/images/spider.jpg'
+import logo from '../assets/images/fs_logo.png'
 
 export default function Navbar() {
     const [nav, setNav] = useState(false);
@@ -11,7 +11,7 @@ export default function Navbar() {
     return (
         <div className='fixed w-full flex h-[80px] justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
             <div>
-                <img src={logo} style={{ width: '50px' }} />
+                <img src={logo} style={{ width: '70px' }} />
             </div>
 
 
