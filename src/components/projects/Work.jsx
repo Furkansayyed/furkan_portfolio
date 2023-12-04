@@ -39,11 +39,11 @@ export default function Work() {
 
     return (
         <>
-            <section id="projects" className='w-full h-screen bg-[#0a192f] text-gray-300 overflow-auto sm:overflow-hidden'>
-                <div className="mx-20">
+            <section id="projects" name='work' className=' bg-[#0a192f] text-gray-300 overflow-auto sm:overflow-hidden'>
+                <div className="sm:mx-32 mx-7">
                     <div className="flex items-center justify-between flex-wrap">
-                        <div className="mb-5 sm:mb-0 text-center mx-auto">
-                            <h3 className="dark:text-white text-[2rem] font-[700] ">
+                        <div className="mb-0 sm:mb-[-20px] sm:text-center sm:mx-auto">
+                            <h3 className="dark:text-white text-[2rem] font-[700] mt-[20px] border-b-4 border-pink-600">
                                 My Projects
                             </h3>
                         </div>
@@ -70,11 +70,11 @@ export default function Work() {
           </div> */}
                     </div>
 
-                    <div className="flex items-center gap-4 flex-wrap mt-10">
+                    <div className="flex items-center gap-4 flex-wrap mt-8">
                         {portfolios?.slice(0, nextItems)?.map((portfolio, index) => (
                             <div
                                 key={index}
-                                className="group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[1]"
+                                className="group max-w-full sm:w-[50%] md:w-[48%] lg:w-[32.2%] relative z-[1]"
                             >
                                 <figure>
                                     <img className="rounded-[8px]" src={portfolio.imgUrl} alt="" style={{ width: '550px' }} />
@@ -94,7 +94,7 @@ export default function Work() {
                         ))}
                     </div>
 
-                    <div className="text-center mt-6">
+                    <div className="text-center mt-4">
                         <button
                             onClick={loadMoreHandler}
                             className="text-white bg-[#2978B5] hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200"
