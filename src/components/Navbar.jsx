@@ -3,6 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import logo from '../assets/images/fs_logo.png'
+import { Link } from 'react-scroll';
 
 export default function Navbar() {
     const [nav, setNav] = useState(false);
@@ -18,11 +19,11 @@ export default function Navbar() {
             {/* menu  */}
 
             <ul className='hidden md:flex'>
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Works</li>
-                <li>Contact</li>
+                <li> <Link to="home" smooth={true} duration={500}> Home </Link></li>
+                <li><Link to="about" smooth={true} duration={500}> About </Link></li>
+                <li><Link to="skills" smooth={true} duration={500}> Skills </Link></li>
+                <li><Link to="work" smooth={true} duration={500}> Works </Link></li>
+                <li><Link to="contact" smooth={true} duration={500}> Contact </Link></li>
             </ul>
 
 
@@ -33,18 +34,18 @@ export default function Navbar() {
 
             {/* mobile Menu  */}
             <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
-                <li className='py-6 text-4xl'>Home</li>
-                <li className='py-6 text-4xl'>About</li>
-                <li className='py-6 text-4xl'>Skills</li>
-                <li className='py-6 text-4xl'>Works</li>
-                <li className='py-6 text-4xl'>Contact</li>
+                <li className='py-6 text-4xl'> <Link to="home" smooth={true} duration={500}> Home </Link></li>
+                <li className='py-6 text-4xl'><Link to="about" smooth={true} duration={500}> About </Link></li>
+                <li className='py-6 text-4xl'><Link to="skills" smooth={true} duration={500}> Skills </Link></li>
+                <li className='py-6 text-4xl'><Link to="work" smooth={true} duration={500}> Works </Link></li>
+                <li className='py-6 text-4xl'><Link to="contact" smooth={true} duration={500}> Contact </Link></li>
             </ul>
 
             {/* Social icons  */}
             <div className='hidden md:flex fixed flex-col top-[35%] left-0'>
                 <ul>
-                    <li className='w-[160px] h-[60px] flex justify-center item-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-                        <a href="" className='flex justify-between items-center w-full text-gray-300 ' >Linked In
+                    <li className='md:w-[160px] md:h-[60px] flex justify-center item-center ml-[-100px] md:hover:ml-[-30px] lg:hover:ml-[-10px] duration-300 bg-blue-600'>
+                        <a href="" className='flex md:justify-between items-center w-full text-gray-300 ' >Linked In
                             <FaLinkedin size={30} />
                         </a></li>
                     <li className='w-[160px] h-[60px] flex justify-center item-center ml-[-100px] hover:ml-[-10px] duration-300  bg-[#333333]'>
@@ -52,12 +53,12 @@ export default function Navbar() {
                             Github <FaGithub size={30} />
                         </a></li>
                     <li className='w-[160px] h-[60px] flex justify-center item-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-                        <a href="" className='flex justify-between items-center w-full text-gray-300 ' >Email 
+                        <a href="" className='flex justify-between items-center w-full text-gray-300 ' >Email
                             <HiOutlineMail size={30} />
                         </a></li>
 
                     <li className='w-[160px] h-[60px] flex justify-center item-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-                        <a href="" className='flex justify-between items-center w-full text-gray-300 ' >Resume 
+                        <a href="" className='flex justify-between items-center w-full text-gray-300 ' >Resume
                             <BsFillPersonLinesFill size={30} />
                         </a></li>
                 </ul>
