@@ -3,7 +3,7 @@ import data from "../../assets/data/portfolioData";
 // import portfolios from "../assets/data/portfolioData";
 import Modal from "./Modal";
 
-export default function Work() {
+export default function Work(props) {
     const [nextItems, setNextItems] = useState(6);
     const [portfolios, setPortfolios] = useState(data);
     const [selectTab, setSelectTab] = useState("all");
@@ -74,8 +74,7 @@ export default function Work() {
                         {portfolios?.slice(0, nextItems)?.map((portfolio, index) => (
                             <div
                                 key={index}
-                                className="group max-w-full sm:w-[50%] md:w-[48%] lg:w-[32.2%] relative z-[1]"
-                            >
+                                className={props.nav ? 'group max-w-full sm:w-[50%] md:w-[48%] lg:w-[32.2%] relative sm:z-[] ' : 'group max-w-full sm:w-[50%] md:w-[48%] lg:w-[32.2%]  sm:z-[] '}>
                                 <figure>
                                     <img className="rounded-[8px]" src={portfolio.imgUrl} alt="" style={{ width: '550px' }} />
                                 </figure>
@@ -106,6 +105,7 @@ export default function Work() {
 
                 {showModal && <Modal setShowModal={setShowModal} activeID={activeID} />}
             </section>
+            
         </>
     )
 }

@@ -5,6 +5,7 @@ import { BsFillPersonLinesFill } from 'react-icons/bs'
 import logo from '../assets/images/fs_logo.png'
 import { Link } from 'react-scroll';
 
+
 export default function Navbar() {
     const [nav, setNav] = useState(false);
     const handleClick = () => setNav(!nav);
@@ -33,7 +34,7 @@ export default function Navbar() {
             </div>
 
             {/* mobile Menu  */}
-            <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
+            <ul className={!nav ? 'hidden' : 'fixed top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center sm:Z-[0]'}>
                 <li className='py-6 text-4xl'> <Link onClick={handleClick} to="home" smooth={true} duration={500}> Home </Link></li>
                 <li className='py-6 text-4xl'><Link onClick={handleClick} to="about" smooth={true} duration={500}> About </Link></li>
                 <li className='py-6 text-4xl'><Link onClick={handleClick} to="skills" smooth={true} duration={500}> Skills </Link></li>
@@ -63,6 +64,11 @@ export default function Navbar() {
                         </a></li>
                 </ul>
             </div>
+            <div className="hidden">
+                {/* <Work nav={nav} i={78}/> */}
+            </div>
         </div>
+
+        
     )
 }
