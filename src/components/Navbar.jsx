@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import logo from '../assets/images/fs_logo.png'
@@ -12,7 +12,7 @@ export default function Navbar() {
     return (
         <div className='fixed w-full flex h-[80px] justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
             <div>
-                <img src={logo} style={{ width: '70px' }} />
+                <img src={logo} style={{ width: '70px' }} alt='Intiial Letters logo' />
             </div>
 
 
@@ -45,20 +45,20 @@ export default function Navbar() {
             <div className='hidden md:flex fixed flex-col top-[35%] left-0'>
                 <ul>
                     <li className='md:w-[160px] md:h-[60px] flex justify-center item-center ml-[-100px] md:hover:ml-[-30px] lg:hover:ml-[-10px] duration-300 bg-blue-600'>
-                        <a href="" className='flex md:justify-between items-center w-full text-gray-300 ' >Linked In
+                        <a href="https://www.linkedin.com/in/furkan-sayyed-a21751262" className='flex md:justify-between items-center w-full text-gray-300 ' >Linked In
                             <FaLinkedin size={30} />
                         </a></li>
                     <li className='w-[160px] h-[60px] flex justify-center item-center ml-[-100px] hover:ml-[-10px] duration-300  bg-[#333333]'>
-                        <a href="" className='flex justify-between items-center w-full text-gray-300 ' >
+                        <a href="https://github.com/Furkansayyed" className='flex justify-between items-center w-full text-gray-300 ' >
                             Github <FaGithub size={30} />
                         </a></li>
                     <li className='w-[160px] h-[60px] flex justify-center item-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-                        <a href="" className='flex justify-between items-center w-full text-gray-300 ' >Email
+                        <a href="mailto:sayyedfurkan115@gmail.com" className='flex justify-between items-center w-full text-gray-300 ' >Email
                             <HiOutlineMail size={30} />
                         </a></li>
 
                     <li className='w-[160px] h-[60px] flex justify-center item-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-                        <a href="" className='flex justify-between items-center w-full text-gray-300 ' >Resume
+                        <a href="https://github.com/Furkansayyed" className='flex justify-between items-center w-full text-gray-300 ' >Resume
                             <BsFillPersonLinesFill size={30} />
                         </a></li>
                 </ul>
