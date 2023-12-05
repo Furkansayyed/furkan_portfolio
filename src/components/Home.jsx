@@ -1,5 +1,6 @@
 import React from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
+import { Typewriter } from 'react-simple-typewriter'
 
 export default function Home() {
     return (
@@ -9,8 +10,18 @@ export default function Home() {
 
             <div className='max-w-[1000px] mx-auto px-8 md:px-28 lg:px-8 flex flex-col justify-center h-full'>
                 <p className='text-pink-600'>Hi, my name is </p>
-                <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>Furkan Sayyed</h1>
-                <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a Full Stack Developer</h2>
+                <h1 className='text-4xl sm:text-7xl font-bold text-[rgb(204,214,246)]'>Furkan Sayyed</h1>
+                <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a &nbsp;
+                    <Typewriter
+                        words={['Full Stack MERN Developer.', 'django developer.', 'Programmer.', 'Ethical Hacker.']}
+                        loop={true}
+                        cursor
+                        cursorStyle='|'
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                        delaySpeed={1000}
+                    />
+                </h2>
                 <p className='text-[#8892b0] py-4 max-w-[700px]'>Passionate about technology and cybersecurity, I am a versatile professional with a keen interest in Python and JavaScript web development.</p>
 
                 <div>
