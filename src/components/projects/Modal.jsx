@@ -12,7 +12,7 @@ const Modal = ({ activeID, setShowModal }) => {
             {
               portfolio.vidUrl != null ?
             <video controls autoPlay autoFocus src={portfolio.vidUrl} className="rounded-[8px]"></video>:
-            <img src={portfolio.imgUrl} />
+            <img src={portfolio.imgUrl} alt={portfolio.title} />
             }
           </figure>
         </div>
@@ -41,7 +41,7 @@ const Modal = ({ activeID, setShowModal }) => {
             ))}
           </div>
 
-          <a href={portfolio.siteUrl} target="_blank">
+          <a href={portfolio.siteUrl} target="_blank" rel="noreferrer">
             <button className="bg-primaryColor text-white py-2 px-4 my-8 rounded-[8px] font-[500] hover:bg-headingColor ease-in duration-300">
               Live Site
             </button>
