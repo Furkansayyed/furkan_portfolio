@@ -5,11 +5,15 @@ const Modal = ({ activeID, setShowModal }) => {
   const portfolio = portfolios.find((portfolio) => portfolio.id === activeID);
 
   return (
-    <div className="overflow-auto w-full h-full fixed top-0 left-0 z-10 bg-headingColor bg-opacity-40">
+    <div className="overflow-auto w-full h-full fixed top-[0] left-0 z-10 bg-headingColor bg-opacity-40">
       <div className=" dark:bg-slate-800 w-11/12 md:max-w-[600px] md:w-full absolute sm:top-[75%] sm:left-[27%] left-4 top-[55%] z-20 bg-white rounded-[8px] transform-translate-x-1/2 -translate-y-1/2 p-5 ">
         <div>
           <figure>
-            <video controls autoPlay autoFocus src={portfolio.vidUrl} className="rounded-[8px]"></video>
+            {
+              portfolio.vidUrl != null ?
+            <video controls autoPlay autoFocus src={portfolio.vidUrl} className="rounded-[8px]"></video>:
+            <img src={portfolio.imgUrl} />
+            }
           </figure>
         </div>
 
@@ -37,7 +41,7 @@ const Modal = ({ activeID, setShowModal }) => {
             ))}
           </div>
 
-          <a href={portfolio.siteUrl}>
+          <a href={portfolio.siteUrl} target="_blank">
             <button className="bg-primaryColor text-white py-2 px-4 my-8 rounded-[8px] font-[500] hover:bg-headingColor ease-in duration-300">
               Live Site
             </button>
