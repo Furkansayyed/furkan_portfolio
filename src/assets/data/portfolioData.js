@@ -1,12 +1,15 @@
 import portfolioImg01 from "../images/img1.avif";
 import chatimg from "../images/chatApp.png"
 import classImg from "../images/classroom.png"
+import blog from '../images/blogPOST.png'
+import batPage from '../images/batman.png'
+import ironmman from '../images/ironman.png'
 
 
-// import chatVideo from "../videos/chatroom_flask.mkv"
-// import classVideo from "../videos/classweb.mkv"
-let chatVideo = null
-let classVideo = null;
+import chatVideo from "../videos/chatApp_flask.mkv"
+import classVideo from "../videos/classRoom.mkv"
+import blogVideo from '../videos/blogPOST.mkv'
+
 
 const portfolios = [
   {
@@ -24,53 +27,54 @@ const portfolios = [
     id: "02",
     imgUrl: classImg,
     category: "Ux",
-    vidUrl : classVideo,
+    vidUrl: classVideo,
     title: "Online Classes Management Web App",
     description:
-      "The web app is used for student management and Online classes management, it has functionality for both student as well as faculty where in a student can submit assignments, make notes & todos, watch online videos, attempt quizzes and interacrt with 3d Models and faculty can assign assignments to students, manage models, manage quizzes, etc...",
-    technologies: ["HTML", "Vue.js", "django", "sqlite3"],
+      "The web app is used for student management and Online classes management",
+    technologies: ["HTML", "BootStrap", "Vue.js", "django", "sqlite3"],
     siteUrl: "#",
   },
   {
     id: "03",
-    imgUrl: portfolioImg01,
+    imgUrl: blog,
     category: "Ux",
-    title: "Multimedia Sharing Website",
+    vidUrl: blogVideo,
+    title: "Blog Post Website in JSP",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium vitae sunt magnam numquam esse ipsam? Quis qui enim, temporibus dignissimos atque repellendus amet a velit. Dolorem quidem animi doloribus saepe!",
-    technologies: ["React", "Tailwind css", "Node.js", "MongoDB"],
+      "A simple Blog Post website in JAVA JSP as backend and mongo db for database",
+    technologies: ["JSP", "BootStrap", "MongoDB"],
     siteUrl: "#",
   },
   {
     id: "04",
+    imgUrl: batPage,
+    category: "Web Design",
+    title: "Bat Mobile Landing Page",
+    description:
+      "Bat Mobile Landing Page UI Design in Figma",
+    technologies: ["Figma"],
+    siteUrl: "#",
+  },
+  {
+    id: "05",
     imgUrl: portfolioImg01,
     category: "Web Design",
     title: "Landing Page",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium vitae sunt magnam numquam esse ipsam? Quis qui enim, temporibus dignissimos atque repellendus amet a velit. Dolorem quidem animi doloribus saepe!",
-    technologies: ["React", "Tailwind css", "Node.js", "MongoDB"],
-    siteUrl: "#",
-  },
-  {
-    id: "05",
-    // imgUrl: portfolioImg03,
-    category: "Web Design",
-    title: "Landing Page",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium vitae sunt magnam numquam esse ipsam? Quis qui enim, temporibus dignissimos atque repellendus amet a velit. Dolorem quidem animi doloribus saepe!",
-    technologies: ["React", "Tailwind css", "Node.js", "MongoDB"],
+    technologies: ["Figma"],
     siteUrl: "#",
   },
 
   {
     id: "06",
-    // imgUrl: portfolioImg06,
+    imgUrl: ironmman,
     category: "Ux",
-    title: "Online Therapy Website",
+    title: "Ironman Suit Cart Page",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium vitae sunt magnam numquam esse ipsam? Quis qui enim, temporibus dignissimos atque repellendus amet a velit. Dolorem quidem animi doloribus saepe!",
-    technologies: ["React", "Tailwind css", "Node.js", "MongoDB"],
-    siteUrl: "#",
+      "Cart Card UI Design in Figma",
+    technologies: ["Figma"],
+    siteUrl: "https://www.figma.com/file/3ANbQFXtRvECgs7xVDFhjn/Iron-Man-Product-Card-Design?type=design&mode=design&t=s73CibQqKWUjI3YG-1",
   },
   {
     id: "07",
